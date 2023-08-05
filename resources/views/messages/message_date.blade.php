@@ -1,0 +1,1 @@
+<div class="chat-meta-day {!! $date !!}"><span class="badge">{!!  Mainhelper::makeReadableDateFormat( $date ) !!}</span></div>
