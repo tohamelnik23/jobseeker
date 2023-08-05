@@ -14,7 +14,7 @@ class SlackInfo extends Model{
         'Client_Info_Deleted' 
     ];  
     public static function getChannels(){
-        $token = "xoxp-611179902182-595896312258-683967936720-d1430769fbdb763147779e1ec25cf1c0";  
+        $token = "##";  
 
         $channels = array();
         $url = 'https://slack.com/api/conversations.list?token=' . $token;
@@ -38,16 +38,16 @@ class SlackInfo extends Model{
         return $result;             
     }
     public static function postMessageForError($type, $text){
-        $token = "xoxp-611179902182-595896312258-683967936720-d1430769fbdb763147779e1ec25cf1c0";  
+        $token = "##";  
         switch($type){
             case 'errors':
-                $channel = "C01DXEXL6P5";
+                $channel = "token";
                 break;
             case 'invalid':
-                $channel = "C01T0GC2GEL";
+                $channel = "token";
                 break;      
             case 'notifications':
-                $channel = "C01DX8XHN10";
+                $channel = "token";
                 break;
         } 
         $url = 'https://slack.com/api/chat.postMessage'; 
